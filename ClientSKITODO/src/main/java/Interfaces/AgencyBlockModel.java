@@ -11,7 +11,7 @@ import Services.User.AgencyServicesEJBRemote;
 
 public class AgencyBlockModel extends AbstractTableModel {
 	 public List<User> list;
-		private final String[] entetes = { "Nom", "Prénom", "Année", "Sexe", "Note","Nom", "Prénom", "Année", "Sexe", "Note" };	
+	  String[] header = {"First Name","Name","Login","Email","Date of birth","Country","City","Level","Sex","Phone"};
 
 	    
 	    public AgencyBlockModel() throws NamingException
@@ -28,10 +28,11 @@ public class AgencyBlockModel extends AbstractTableModel {
 	    }
 
 
-		@Override
-		public String getColumnName(int columnIndex) {
-			return entetes[columnIndex];
-		}
+	    @Override
+		   public String getColumnName(int column)
+		    {
+		       return header[column];
+		   }
 	    
 	    
 	@Override

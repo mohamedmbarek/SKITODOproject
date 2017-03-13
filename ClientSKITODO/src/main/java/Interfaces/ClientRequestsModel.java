@@ -14,7 +14,7 @@ import Services.User.ClientServicesEJBRemote;
 public class ClientRequestsModel extends AbstractTableModel {
 	
 	 public List<User> list;
-	  //  String[] header = {"idClient","nom","prenom"};
+	  String[] header = {"First Name","Name","Login","Email","Date of birth","Country","City","Level","Sex","Phone"};
 
 	    
 	    public ClientRequestsModel() throws NamingException
@@ -29,11 +29,12 @@ public class ClientRequestsModel extends AbstractTableModel {
 
 	    	list = proxy.findRequestsClient();
 	    }
-
-	 //   public String getColumnName(int column)
-	  //  {
-	  //      return header[column];
-	   // }
+	    
+	    @Override
+	   public String getColumnName(int column)
+	    {
+	       return header[column];
+	   }
 	    
 	    
 	@Override

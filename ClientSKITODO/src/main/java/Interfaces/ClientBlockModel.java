@@ -14,7 +14,7 @@ import Services.User.ClientServicesEJBRemote;
 public class ClientBlockModel extends AbstractTableModel {
 	
 	 public List<User> list;
-	  //  String[] header = {"idClient","nom","prenom"};
+  String[] header = {"First Name","Name","Login","Email","Date of birth","Country","City","Level","Sex","Phone"};
 
 	    
 	    public ClientBlockModel() throws NamingException
@@ -30,10 +30,11 @@ public class ClientBlockModel extends AbstractTableModel {
 	    	list = proxy.findBlockedClient();
 	    }
 
-	 //   public String getColumnName(int column)
-	  //  {
-	  //      return header[column];
-	   // }
+	    @Override
+		   public String getColumnName(int column)
+		    {
+		       return header[column];
+		   }
 	    
 	    
 	@Override

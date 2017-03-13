@@ -88,6 +88,7 @@ public class SkiToDoAdmin extends JFrame {
 	int col4=-1;
 	int row5=-1;
 	int col5=-1;
+	
 	private final String[] entetes = { "Nom", "Prénom", "Année", "Sexe", "Note","Nom", "Prénom", "Année", "Sexe", "Note" };	
 
 	
