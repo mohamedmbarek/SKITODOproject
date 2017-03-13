@@ -344,5 +344,7 @@ u =   proxy.findAgencyById(id);
 					.addContainerGap(33, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
+	   	setDefaultCloseOperation(DISPOSE_ON_CLOSE);     
+
 	}
 }
