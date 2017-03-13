@@ -65,7 +65,6 @@ public class SkiToDoAdmin extends JFrame {
 	private JTextField txtLogin;
 	private JTextField txtDateofbirth;
 	private JTextField txtCountry;
-	private JTextField txtPassword;
 	private JTextField txtLastname;
 	private JTextField txtEmail;
 	private JTextField txtPhone;
@@ -123,6 +122,7 @@ public class SkiToDoAdmin extends JFrame {
 		JLabel jLabelPhotos = new JLabel("Photos :");
 		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBackground(new Color(30, 144, 255));
 
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -153,6 +153,7 @@ public class SkiToDoAdmin extends JFrame {
 		tabbedPane.addTab("Home", null, menuBar, null);
 		
 		JMenuBar menuBar_2 = new JMenuBar();
+		menuBar_2.setBackground(new Color(30, 144, 255));
 		tabbedPane.addTab("Account", null, menuBar_2, null);
 		
 		JPanel panel = new JPanel();
@@ -195,10 +196,6 @@ public class SkiToDoAdmin extends JFrame {
 		lblCity.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
 		lblCity.setForeground(Color.WHITE);
 		
-		JLabel lblPassword = new JLabel("Password:");
-		lblPassword.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
-		lblPassword.setForeground(Color.WHITE);
-		
 		JButton btnUpdate = new JButton("Update");
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -219,7 +216,6 @@ public class SkiToDoAdmin extends JFrame {
 						c.setEmail(txtEmail.getText());
 						c.setLogin(txtLogin.getText());
 						c.setName(txtLastname.getText());
-						c.setPassword(txtPassword.getText());
 						c.setPhone(Integer.parseInt(txtPhone.getText()));
 						
 						DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
@@ -256,12 +252,16 @@ public class SkiToDoAdmin extends JFrame {
 	//		System.out.println(c.getName());
 			
 		txtFirstname = new JTextField();
+		txtFirstname.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		txtFirstname.setBackground(new Color(30, 144, 255));
 		txtFirstname.setText(c.getFirstName());
 		txtFirstname.setColumns(10);
 		
 		
 		
 		txtLogin = new JTextField();
+		txtLogin.setBackground(new Color(30, 144, 255));
+		txtLogin.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
 		txtLogin.setText(c.getLogin());
 		txtLogin.setColumns(10);
 		
@@ -269,30 +269,38 @@ public class SkiToDoAdmin extends JFrame {
 		Date today = Calendar.getInstance().getTime();        
 
 		txtDateofbirth = new JTextField();
+		txtDateofbirth.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		txtDateofbirth.setBackground(new Color(30, 144, 255));
 		txtDateofbirth.setText(df.format(c.getDateOfBirth()));
 		txtDateofbirth.setColumns(10);
 		
 		txtCountry = new JTextField();
+		txtCountry.setBackground(new Color(30, 144, 255));
+		txtCountry.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
 		txtCountry.setText(c.getCountry());
 		txtCountry.setColumns(10);
 		
-		txtPassword = new JTextField();
-		txtPassword.setText(c.getPassword());
-		txtPassword.setColumns(10);
-		
 		txtLastname = new JTextField();
+		txtLastname.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		txtLastname.setBackground(new Color(30, 144, 255));
 		txtLastname.setText(c.getName());
 		txtLastname.setColumns(10);
 		
 		txtEmail = new JTextField();
+		txtEmail.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		txtEmail.setBackground(new Color(30, 144, 255));
 		txtEmail.setText(c.getEmail());
 		txtEmail.setColumns(10);
 		
 		txtPhone = new JTextField();
+		txtPhone.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		txtPhone.setBackground(new Color(30, 144, 255));
 	    txtPhone.setText(Integer.toString(c.getPhone()));
 		txtPhone.setColumns(10);
 		
 		txtCity = new JTextField();
+		txtCity.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
+		txtCity.setBackground(new Color(30, 144, 255));
 		txtCity.setText(c.getCity());
 		txtCity.setColumns(10);
 		
@@ -303,10 +311,7 @@ public class SkiToDoAdmin extends JFrame {
 					.addGap(124)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_panel.createSequentialGroup()
-							.addComponent(lblPassword)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(txtPassword, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED)
+							.addGap(240)
 							.addComponent(btnUpdate, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_panel.createSequentialGroup()
 							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
@@ -321,12 +326,12 @@ public class SkiToDoAdmin extends JFrame {
 								.addGroup(gl_panel.createSequentialGroup()
 									.addComponent(lblDateOfBirth)
 									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtDateofbirth, GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
+									.addComponent(txtDateofbirth, GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
 								.addGroup(gl_panel.createSequentialGroup()
 									.addComponent(lblNewLabel_1)
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addComponent(txtCountry, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-							.addPreferredGap(ComponentPlacement.RELATED, 34, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.RELATED, 33, GroupLayout.PREFERRED_SIZE)
 							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_panel.createSequentialGroup()
 									.addComponent(lblCity)
@@ -374,17 +379,9 @@ public class SkiToDoAdmin extends JFrame {
 						.addComponent(lblCity)
 						.addComponent(txtCountry, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
 						.addComponent(txtCity, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
-					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel.createSequentialGroup()
-							.addGap(31)
-							.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblPassword)
-								.addComponent(txtPassword, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE))
-							.addContainerGap(64, Short.MAX_VALUE))
-						.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnUpdate, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
-							.addGap(38))))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(btnUpdate, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+					.addGap(38))
 		);
 		panel.setLayout(gl_panel);
 		
@@ -824,9 +821,6 @@ public class SkiToDoAdmin extends JFrame {
 		panel_7.setLayout(gl_panel_7);
 		clientAccountPanel.setLayout(gl_clientAccountPanel);
 		panel_3.setLayout(gl_panel_3);
-		
-		JMenuBar menuBar_3 = new JMenuBar();
-		tabbedPane.addTab("Equipment", null, menuBar_3, null);
 		
 		JMenuBar menuBar_4 = new JMenuBar();
 		tabbedPane.addTab("Agency Requests", null, menuBar_4, null);
