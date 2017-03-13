@@ -18,5 +18,7 @@ public class ClientSKITODO {
         + "Hello everyone :) ").create();
 
     System.out.println(message.getSid());
+    
+    //added by hama
   }
 }
