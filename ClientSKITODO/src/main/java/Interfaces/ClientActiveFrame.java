@@ -234,20 +234,6 @@ public class ClientActiveFrame extends JFrame {
 			}
 		});
 		
-		JButton btnBack = new JButton("Back");
-		btnBack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					ClientActiveFrame p = new ClientActiveFrame(id);
-	                p.setVisible(false);
-
-				} catch (NamingException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-		});
-		
 		JButton btnDeleteRequest = new JButton("Delete account");
 		btnDeleteRequest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -332,7 +318,6 @@ public class ClientActiveFrame extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(228)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-								.addComponent(btnBack, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(btnDeleteRequest, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(btnAcceptRequest, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
 					.addGap(176))
@@ -385,9 +370,7 @@ public class ClientActiveFrame extends JFrame {
 					.addComponent(btnAcceptRequest, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnDeleteRequest, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnBack, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(33, Short.MAX_VALUE))
+					.addContainerGap(76, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	   	setDefaultCloseOperation(DISPOSE_ON_CLOSE);     

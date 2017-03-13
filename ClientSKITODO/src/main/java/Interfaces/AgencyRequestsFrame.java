@@ -176,8 +176,6 @@ public class AgencyRequestsFrame extends JFrame {
 		
 		JButton btnAcceptRequest = new JButton("Accept request");
 		
-		JButton btnBack = new JButton("Back");
-		
 		JButton btnDeleteRequest = new JButton("Delete request");
 		
 btnAcceptRequest.addActionListener(new ActionListener() {
@@ -342,7 +340,6 @@ btnAcceptRequest.addActionListener(new ActionListener() {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(228)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-								.addComponent(btnBack, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(btnDeleteRequest, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(btnAcceptRequest, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
 					.addGap(176))
@@ -395,9 +392,7 @@ btnAcceptRequest.addActionListener(new ActionListener() {
 					.addComponent(btnAcceptRequest, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnDeleteRequest, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnBack, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(33, Short.MAX_VALUE))
+					.addContainerGap(76, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
 	   	setDefaultCloseOperation(DISPOSE_ON_CLOSE);     
