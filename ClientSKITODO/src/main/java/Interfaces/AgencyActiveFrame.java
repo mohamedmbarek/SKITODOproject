@@ -3,6 +3,13 @@ package Interfaces;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.swing.JFrame;
@@ -25,6 +32,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Properties;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -184,7 +192,42 @@ u =   proxy.findAgencyById(id);
 					  
 					  JOptionPane.showMessageDialog(null,"Request Accepted");
 					  
-					   	setDefaultCloseOperation(DISPOSE_ON_CLOSE);     
+					   	setDefaultCloseOperation(DISPOSE_ON_CLOSE);    
+					   	
+						Properties props = new Properties();
+						props.put("mail.smtp.host", "smtp.gmail.com");
+						props.put("mail.smtp.socketFactory.port", "465");
+						props.put("mail.smtp.socketFactory.class",
+								"javax.net.ssl.SSLSocketFactory");
+						props.put("mail.smtp.auth", "true");
+						props.put("mail.smtp.port", "465");
+
+						Session session = Session.getDefaultInstance(props,
+							new javax.mail.Authenticator() {
+								protected PasswordAuthentication getPasswordAuthentication() {
+									return new PasswordAuthentication("skitodo2017@gmail.com","skitodoadmin");
+								}
+							});
+
+						try {
+
+							Message message = new MimeMessage(session);
+							message.setFrom(new InternetAddress("skitodo2017@gmail.com"));
+							message.setRecipients(Message.RecipientType.TO,
+									InternetAddress.parse(u.getEmail()));
+							message.setSubject("Blocked account");
+							message.setText("Good morning Mr "+u.getFirstName()+"," +
+									"\n\n Your account is blocked "
+									+ "\n\nplease verify your state with SkiToDo administrator"+
+									"\n\n Welcome to SkiToDo ...");
+
+							Transport.send(message);
+
+							System.out.println("Done");
+
+						} catch (MessagingException e3) {
+							throw new RuntimeException(e3);
+						}
 
 
 				} catch (NamingException e1) {

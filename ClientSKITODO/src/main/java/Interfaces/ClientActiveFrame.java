@@ -214,9 +214,10 @@ public class ClientActiveFrame extends JFrame {
 							message.setFrom(new InternetAddress("skitodo2017@gmail.com"));
 							message.setRecipients(Message.RecipientType.TO,
 									InternetAddress.parse(u.getEmail()));
-							message.setSubject("Accepting Request");
+							message.setSubject("Blocked account");
 							message.setText("Good morning Mr "+u.getFirstName()+"," +
-									"\n\n Your registration has been successfully completed"+
+									"\n\n Your account is blocked "
+									+ "\n\nplease verify your state with SkiToDo administrator"+
 									"\n\n Welcome to SkiToDo ...");
 
 							Transport.send(message);
