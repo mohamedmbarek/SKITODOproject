@@ -155,6 +155,8 @@ public class SkiToDoAdmin extends JFrame {
 		JMenuBar menuBar_2 = new JMenuBar();
 		menuBar_2.setBackground(new Color(30, 144, 255));
 		tabbedPane.addTab("Account", null, menuBar_2, null);
+		tabbedPane.setForegroundAt(1, new Color(0, 0, 0));
+		tabbedPane.setBackgroundAt(1, new Color(30, 144, 255));
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(30, 144, 255));
