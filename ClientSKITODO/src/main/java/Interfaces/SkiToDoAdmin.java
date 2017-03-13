@@ -167,35 +167,35 @@ public class SkiToDoAdmin extends JFrame {
 			
 			
 		JLabel lblNewLabel = new JLabel("First Name:");
-		lblNewLabel.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel.setForeground(Color.WHITE);
 		
 		JLabel lblLogin = new JLabel("Login:");
-		lblLogin.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblLogin.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblLogin.setForeground(Color.WHITE);
 		
 		JLabel lblLastName = new JLabel("Last Name:");
-		lblLastName.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblLastName.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblLastName.setForeground(Color.WHITE);
 		
 		JLabel lblEmail = new JLabel("Email:");
-		lblEmail.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblEmail.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblEmail.setForeground(Color.WHITE);
 		
 		JLabel lblDateOfBirth = new JLabel("Date of birth:");
-		lblDateOfBirth.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblDateOfBirth.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblDateOfBirth.setForeground(Color.WHITE);
 		
 		JLabel lblPhone = new JLabel("Phone:");
-		lblPhone.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblPhone.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblPhone.setForeground(Color.WHITE);
 		
 		JLabel lblNewLabel_1 = new JLabel("Country:");
-		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_1.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel_1.setForeground(Color.WHITE);
 		
 		JLabel lblCity = new JLabel("City:");
-		lblCity.setFont(new Font("Comic Sans MS", Font.BOLD | Font.ITALIC, 20));
+		lblCity.setFont(new Font("Apple Braille", Font.BOLD | Font.ITALIC, 20));
 		lblCity.setForeground(Color.WHITE);
 		
 		JButton btnUpdate = new JButton("Update");
@@ -306,6 +306,10 @@ public class SkiToDoAdmin extends JFrame {
 		txtCity.setText(c.getCity());
 		txtCity.setColumns(10);
 		
+		JLabel label_5 = new JLabel("Administrateur Account");
+		label_5.setForeground(Color.WHITE);
+		label_5.setFont(new Font("Arial Hebrew Scholar", Font.BOLD, 25));
+		
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.TRAILING)
@@ -313,51 +317,55 @@ public class SkiToDoAdmin extends JFrame {
 					.addGap(124)
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_panel.createSequentialGroup()
-							.addGap(240)
-							.addComponent(btnUpdate, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE))
+							.addComponent(lblNewLabel)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtFirstname, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_panel.createSequentialGroup()
-							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblNewLabel)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtFirstname, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblLogin)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtLogin, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblDateOfBirth)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtDateofbirth, GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblNewLabel_1)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtCountry, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-							.addPreferredGap(ComponentPlacement.RELATED, 33, GroupLayout.PREFERRED_SIZE)
-							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblCity)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtCity, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblLastName)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtLastname, GroupLayout.PREFERRED_SIZE, 169, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblEmail)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtEmail, GroupLayout.PREFERRED_SIZE, 307, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_panel.createSequentialGroup()
-									.addComponent(lblPhone)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtPhone, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)))
-							.addPreferredGap(ComponentPlacement.RELATED)))
+							.addComponent(lblLogin)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtLogin, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(lblDateOfBirth)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtDateofbirth, GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(lblNewLabel_1)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtCountry, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+					.addPreferredGap(ComponentPlacement.RELATED, 29, GroupLayout.PREFERRED_SIZE)
+					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(lblCity)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtCity, GroupLayout.PREFERRED_SIZE, 189, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(lblLastName)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtLastname, GroupLayout.PREFERRED_SIZE, 169, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(lblEmail)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtEmail, GroupLayout.PREFERRED_SIZE, 307, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(lblPhone)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtPhone, GroupLayout.PREFERRED_SIZE, 262, GroupLayout.PREFERRED_SIZE)))
 					.addGap(35))
+				.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
+					.addGap(304)
+					.addComponent(label_5)
+					.addContainerGap(316, Short.MAX_VALUE))
+				.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
+					.addGap(377)
+					.addComponent(btnUpdate, GroupLayout.PREFERRED_SIZE, 132, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(382, Short.MAX_VALUE))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
-					.addGap(91)
+					.addGap(19)
+					.addComponent(label_5, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+					.addGap(44)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblNewLabel)
 						.addComponent(lblLastName)
@@ -832,7 +840,7 @@ public class SkiToDoAdmin extends JFrame {
 		panel_1.setBackground(new Color(30, 144, 255));
 		menuBar_4.add(panel_1);
 		
-		JLabel label = new JLabel("List of client requests:");
+		JLabel label = new JLabel("List of agency requests:");
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font("Chalkboard SE", Font.BOLD | Font.ITALIC, 25));
 		
@@ -889,13 +897,13 @@ public class SkiToDoAdmin extends JFrame {
 				.addGroup(gl_panel_1.createSequentialGroup()
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel_1.createSequentialGroup()
-							.addGap(325)
-							.addComponent(label, GroupLayout.PREFERRED_SIZE, 273, GroupLayout.PREFERRED_SIZE))
 						.addComponent(tableAgencyRequest, GroupLayout.PREFERRED_SIZE, 942, GroupLayout.PREFERRED_SIZE)
 						.addGroup(gl_panel_1.createSequentialGroup()
 							.addGap(380)
-							.addComponent(buttonAgencyRequest, GroupLayout.PREFERRED_SIZE, 138, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(buttonAgencyRequest, GroupLayout.PREFERRED_SIZE, 138, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_panel_1.createSequentialGroup()
+							.addGap(325)
+							.addComponent(label)))
 					.addContainerGap())
 		);
 		gl_panel_1.setVerticalGroup(
