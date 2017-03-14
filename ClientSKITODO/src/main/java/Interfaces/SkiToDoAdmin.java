@@ -245,10 +245,10 @@ public class SkiToDoAdmin extends JFrame {
 		
        InitialContext ctx = new InitialContext();
 		
-       Object object;
+            Object object;
 		ctx = new InitialContext();
 		object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-		  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
+		AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
 
 			User c = proxy.findAdmin("admin");
 	//		System.out.println(c.getName());
@@ -480,16 +480,8 @@ public class SkiToDoAdmin extends JFrame {
 		
       buttonActiveAgency.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				 InitialContext ctx;
 				try {
-					Object object;
-					ctx = new InitialContext();
-					object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-					  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
-
-					  
-					  if (row4==-1 || col4==-1)
+					if (row4==-1 || col4==-1)
 				        {
 				           JOptionPane.showMessageDialog(null, "Cochez la personne souhaitée","access denied",JOptionPane.ERROR_MESSAGE);
 				        }
@@ -505,10 +497,6 @@ public class SkiToDoAdmin extends JFrame {
 				} 					
 			}
 		});
-		
-		
-		
-		
 		
 		GroupLayout gl_panel_4 = new GroupLayout(panel_4);
 		gl_panel_4.setHorizontalGroup(
@@ -555,7 +543,6 @@ public class SkiToDoAdmin extends JFrame {
 		
 		tableBlockedAgency = new JTable();
 		tableBlockedAgency.setModel(new AgencyBlockModel());
-		
 		tableBlockedAgency.addMouseListener(new MouseAdapter() {
              
              @Override
@@ -570,16 +557,8 @@ public class SkiToDoAdmin extends JFrame {
 		
        buttonBlockedAgency.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				 InitialContext ctx;
 				try {
-					Object object;
-					ctx = new InitialContext();
-					object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-					  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
-
-					  
-					  if (row5==-1 || col5==-1)
+					if (row5==-1 || col5==-1)
 				        {
 				           JOptionPane.showMessageDialog(null, "Cochez la personne souhaitée","access denied",JOptionPane.ERROR_MESSAGE);
 				        }
@@ -596,10 +575,7 @@ public class SkiToDoAdmin extends JFrame {
 			}
 		});
 		
-		
-		
-		
-		GroupLayout gl_panel_5 = new GroupLayout(panel_5);
+       GroupLayout gl_panel_5 = new GroupLayout(panel_5);
 		gl_panel_5.setHorizontalGroup(
 			gl_panel_5.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_panel_5.createSequentialGroup()
@@ -672,10 +648,7 @@ public class SkiToDoAdmin extends JFrame {
 		
 		tableClientActive = new JTable();
 		tableClientActive.setModel(new ClientActiveModel());
-		
-		
-		
-       tableClientActive.addMouseListener(new MouseAdapter() {
+		tableClientActive.addMouseListener(new MouseAdapter() {
              
              @Override
        public void mouseClicked(MouseEvent me) {
@@ -690,15 +663,7 @@ public class SkiToDoAdmin extends JFrame {
        buttonActiveClient.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				 InitialContext ctx;
-				try {
-					Object object;
-					ctx = new InitialContext();
-					object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-					  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
-
-					  
-					  if (row==-1 || col==-1)
+				try { if (row==-1 || col==-1)
 				        {
 				           JOptionPane.showMessageDialog(null, "Cochez la personne souhaitée","access denied",JOptionPane.ERROR_MESSAGE);
 				        }
@@ -742,7 +707,6 @@ public class SkiToDoAdmin extends JFrame {
 					.addContainerGap(100, Short.MAX_VALUE))
 		);
 		panel_6.setLayout(gl_panel_6);
-		
 		JMenuBar blockedClient = new JMenuBar();
 		ActivBlockedClient.addTab("Blocked accounts", null, blockedClient, null);
 		
@@ -756,12 +720,8 @@ public class SkiToDoAdmin extends JFrame {
 		label_4.setFont(new Font("Chalkboard SE", Font.BOLD | Font.ITALIC, 25));
 		
 		JButton buttonBlockedClient = new JButton("View account");
-		
-		
-		
 		tableClientBlock = new JTable();
 		tableClientBlock.setModel(new ClientBlockModel());
-		
 		tableClientBlock.addMouseListener(new MouseAdapter() {
              
              @Override
@@ -777,15 +737,7 @@ public class SkiToDoAdmin extends JFrame {
 		buttonBlockedClient.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				 InitialContext ctx;
-				try {
-					Object object;
-					ctx = new InitialContext();
-					object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-					  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
-
-					  
-					  if (row1==-1 || col1==-1)
+				try {if (row1==-1 || col1==-1)
 				        {
 				           JOptionPane.showMessageDialog(null, "Cochez la personne souhaitée","access denied",JOptionPane.ERROR_MESSAGE);
 				        }
@@ -794,7 +746,6 @@ public class SkiToDoAdmin extends JFrame {
 				        int id =((ClientBlockModel)tableClientBlock.getModel()).list.get(row1).getId();
 				       ClientBlockedFrame d= new ClientBlockedFrame(id);
 				       d.setVisible(true);}						//System.out.println(c.getFirstName());
-						
 				} catch (NamingException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -848,7 +799,6 @@ public class SkiToDoAdmin extends JFrame {
 		
 		tableAgencyRequest = new JTable();
 		tableAgencyRequest.setModel(new AgencyRequestsModel());
-		
 		tableAgencyRequest.addMouseListener(new MouseAdapter() {
              
              @Override
@@ -864,15 +814,7 @@ public class SkiToDoAdmin extends JFrame {
        buttonAgencyRequest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				 InitialContext ctx;
-				try {
-					Object object;
-					ctx = new InitialContext();
-					object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-					  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
-
-					  
-					  if (row3==-1 || col3==-1)
+				try {if (row3==-1 || col3==-1)
 				        {
 				           JOptionPane.showMessageDialog(null, "Cochez la personne souhaitée","access denied",JOptionPane.ERROR_MESSAGE);
 				        }
@@ -949,16 +891,8 @@ public class SkiToDoAdmin extends JFrame {
 		
 		btnAcceptRequest.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				 InitialContext ctx;
-				try {
-					Object object;
-					ctx = new InitialContext();
-					object = ctx.lookup("/SKITODOproject-ear/SKITODOproject-ejb/AdminServicesEJB!Services.User.AdminServicesEJBRemote");
-					  AdminServicesEJBRemote proxy = (AdminServicesEJBRemote) object;
-
-					  
-					  if (row2==-1 || col2==-1)
+	            try {
+				 if (row2==-1 || col2==-1)
 				        {
 				           JOptionPane.showMessageDialog(null, "Cochez la personne souhaitée","access denied",JOptionPane.ERROR_MESSAGE);
 				        }
@@ -967,9 +901,7 @@ public class SkiToDoAdmin extends JFrame {
 				        int id =((ClientRequestsModel)clientRequests.getModel()).list.get(row2).getId();
 				       ClientRequestsFrame d= new ClientRequestsFrame(id);
 				       d.setVisible(true);}						//System.out.println(c.getFirstName());
-						
-						
-
+				
 				} catch (NamingException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -1012,9 +944,6 @@ public class SkiToDoAdmin extends JFrame {
 		
 		
 		clientRequests.setModel(new ClientRequestsModel());
-		
-		
-		
 		
 		JMenuBar menuBar_6 = new JMenuBar();
 		tabbedPane.addTab("Competition Requests", null, menuBar_6, null);
