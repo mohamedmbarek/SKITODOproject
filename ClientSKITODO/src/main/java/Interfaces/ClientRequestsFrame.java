@@ -172,8 +172,10 @@ public class ClientRequestsFrame extends JFrame {
 	    lblGetDate.setText(df.format(u.getDateOfBirth()));
 		
 		JButton btnAcceptRequest = new JButton("Accept request");
+		btnAcceptRequest.setBackground(new Color(46, 139, 87));
 		
 		JButton btnDeleteRequest = new JButton("Delete request");
+		btnDeleteRequest.setBackground(new Color(255, 0, 0));
 		
 		btnAcceptRequest.addActionListener(new ActionListener() {
 			
