@@ -54,6 +54,7 @@ import java.awt.Font;
 import java.awt.Point;
 
 import javax.swing.JTable;
+import java.awt.BorderLayout;
 
 public class SkiToDoAdmin extends JFrame {
 
@@ -151,6 +152,42 @@ public class SkiToDoAdmin extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setToolTipText("");
 		tabbedPane.addTab("Home", null, menuBar, null);
+		
+		JPanel panel_8 = new JPanel();
+		panel_8.setBackground(new Color(30, 144, 255));
+		panel_8.setForeground(new Color(30, 144, 255));
+		menuBar.add(panel_8);
+		
+		JLabel lblWelcome = new JLabel("WELCOME");
+		lblWelcome.setFont(new Font("AppleGothic", Font.BOLD, 50));
+		lblWelcome.setForeground(new Color(255, 255, 255));
+		
+		JLabel label_6 = new JLabel("ADMINISTRATOR");
+		label_6.setForeground(Color.WHITE);
+		label_6.setFont(new Font("AppleGothic", Font.BOLD, 50));
+		GroupLayout gl_panel_8 = new GroupLayout(panel_8);
+		gl_panel_8.setHorizontalGroup(
+			gl_panel_8.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, gl_panel_8.createSequentialGroup()
+					.addContainerGap(210, Short.MAX_VALUE)
+					.addGroup(gl_panel_8.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel_8.createSequentialGroup()
+							.addGap(68)
+							.addComponent(lblWelcome)
+							.addPreferredGap(ComponentPlacement.RELATED, 155, GroupLayout.PREFERRED_SIZE))
+						.addComponent(label_6, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 479, GroupLayout.PREFERRED_SIZE))
+					.addGap(158))
+		);
+		gl_panel_8.setVerticalGroup(
+			gl_panel_8.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_8.createSequentialGroup()
+					.addGap(118)
+					.addComponent(lblWelcome)
+					.addGap(51)
+					.addComponent(label_6, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(200, Short.MAX_VALUE))
+		);
+		panel_8.setLayout(gl_panel_8);
 		
 		JMenuBar menuBar_2 = new JMenuBar();
 		menuBar_2.setBackground(new Color(30, 144, 255));
